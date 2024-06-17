@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("fondo_mau.jpg"); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.image-slider {
+   /* width: 80%;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;*/
+    position: absolute; /* Make slider absolute */
+    bottom: 20px; /* Position from bottom */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    /* ... other styles ... */
+}
+
+.slides {
+    display: flex;
+    animation: slide 15s linear infinite;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 20%;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-80%);
+    }
+}
+
+.text-box {
+    position: absolute;
+    bottom: 470px;
+    right: 200px;
+    background-color: rgba(86, 86, 86, 0.5);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid #b22a2a;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+}
+
+.text-box h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text-box p {
+    /* ... other styles ... */
+    font-size: 18px; /* Adjust as needed */
+}
+.btn {
+    background-color: #f04e4e; /* Orange button color */
+    color: white; /* White text color */
+    padding: 15px 20px; /* Increase padding */
+    margin: 20px 0;
+    border: 2px solid #ccc; /* Light border color */
+    border-radius: 5px;
+    /* ... other styles ... */
+}
